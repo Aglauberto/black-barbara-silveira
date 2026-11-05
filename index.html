@@ -10,15 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #08080a;
-      --card-bg: rgba(18, 18, 22, 0.92);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --gold-primary: #e6ca85;
-      --gold-gradient: linear-gradient(135deg, #fce5b2 0%, #d4af37 50%, #aa820a 100%);
+      --bg-dark: #07090e;
+      --card-bg: rgba(13, 18, 28, 0.94);
+      --card-border: rgba(56, 189, 248, 0.16);
+      
+      /* Cores da Luciane: Azul Claro e Azul Escuro */
+      --blue-light: #38bdf8;
+      --blue-dark: #1e40af;
+      --blue-gradient: linear-gradient(135deg, #ffffff 0%, #38bdf8 55%, #1d4ed8 100%);
+      
       --wp-green: #25D366;
-      --text-main: #f9fafb;
-      --text-muted: #9ca3af;
-      --accent-glow: rgba(212, 175, 55, 0.14);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent-glow: rgba(56, 189, 248, 0.22);
     }
 
     * {
@@ -41,16 +45,16 @@
       overflow-x: hidden;
     }
 
-    /* Iluminação de fundo estética / luxo */
+    /* Iluminação de fundo estética em azul */
     body::before {
       content: "";
       position: fixed;
-      top: -60px;
+      top: -70px;
       left: 50%;
       transform: translateX(-50%);
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(8, 8, 10, 0) 70%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(7, 9, 14, 0) 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -66,7 +70,8 @@
       position: relative;
       z-index: 1;
       backdrop-filter: blur(16px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.9),
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95),
+                  0 0 25px -5px rgba(56, 189, 248, 0.12),
                   0 0 0 1px rgba(255, 255, 255, 0.04);
     }
 
@@ -75,9 +80,9 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: rgba(212, 175, 55, 0.1);
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      color: var(--gold-primary);
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--blue-light);
       padding: 6px 14px;
       border-radius: 999px;
       font-size: 11px;
@@ -85,14 +90,15 @@
       letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 18px;
+      box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
     }
 
     .pill-dot {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 8px #22c55e;
+      background: var(--blue-light);
+      box-shadow: 0 0 8px var(--blue-light);
       animation: pulse-dot 1.8s infinite ease-in-out;
     }
 
@@ -101,7 +107,7 @@
       50% { opacity: 0.4; transform: scale(0.85); }
     }
 
-    /* Avatar com aro iluminado */
+    /* Avatar com aro iluminado em degradê (branco -> azul claro -> azul escuro) */
     .avatar-box {
       position: relative;
       width: 110px;
@@ -113,9 +119,9 @@
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      padding: 3px;
-      background: linear-gradient(135deg, #d4af37, #f3e09d, #25D366);
-      box-shadow: 0 0 25px rgba(212, 175, 55, 0.22);
+      padding: 3.5px;
+      background: var(--blue-gradient);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.35);
     }
 
     .avatar-img {
@@ -124,7 +130,7 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      background: #18181b;
+      background: #0f172a;
     }
 
     .avatar-wp-icon {
@@ -138,7 +144,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2.5px solid #141418;
+      border: 2.5px solid #0d121c;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     }
 
@@ -154,7 +160,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #9ca3af;
+      color: var(--blue-light);
       margin-bottom: 4px;
     }
 
@@ -167,8 +173,9 @@
       margin-bottom: 6px;
     }
 
-    .title-main .gold {
-      background: var(--gold-gradient);
+    /* Degradê do branco para azul claro e azul escuro */
+    .title-main .blue-gradient {
+      background: var(--blue-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
@@ -178,11 +185,11 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: 16px;
-      color: var(--gold-primary);
+      color: var(--blue-light);
       margin-bottom: 20px;
     }
 
-    /* Botão CTA Principal (Posicionado no topo para ação imediata) */
+    /* Botão CTA Principal */
     .btn-cta {
       display: flex;
       align-items: center;
@@ -238,18 +245,18 @@
       gap: 7px;
       font-size: 12.5px;
       color: #94a3b8;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 5px 12px;
+      background: rgba(56, 189, 248, 0.06);
+      padding: 5px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(56, 189, 248, 0.15);
     }
 
     .social-proof-dot {
       width: 7px;
       height: 7px;
-      background: #22c55e;
+      background: var(--blue-light);
       border-radius: 50%;
-      box-shadow: 0 0 6px #22c55e;
+      box-shadow: 0 0 6px var(--blue-light);
     }
 
     .social-proof strong {
@@ -259,7 +266,7 @@
     /* Cartão de Benefícios / Segurança */
     .benefits {
       background: rgba(255, 255, 255, 0.025);
-      border: 1px solid rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(56, 189, 248, 0.12);
       border-radius: 16px;
       padding: 15px 16px;
       margin-bottom: 20px;
@@ -281,8 +288,12 @@
     .benefit-icon {
       width: 18px;
       height: 18px;
-      color: var(--wp-green);
+      color: var(--blue-light);
       flex-shrink: 0;
+    }
+
+    .benefit-row strong {
+      color: #ffffff;
     }
 
     /* Nota segura */
@@ -317,12 +328,12 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(18, 20, 24, 0.95);
-      border: 1px solid rgba(37, 211, 102, 0.3);
+      background: rgba(13, 18, 28, 0.96);
+      border: 1px solid rgba(56, 189, 248, 0.35);
       border-radius: 16px;
       padding: 12px 14px;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.7), 0 0 15px rgba(37, 211, 102, 0.15);
-      backdrop-filter: blur(12px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.75), 0 0 16px rgba(56, 189, 248, 0.2);
+      backdrop-filter: blur(14px);
       opacity: 0;
       transform: translateY(35px) scale(0.96);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -337,18 +348,18 @@
       width: 38px;
       height: 38px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      background: var(--blue-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 0 10px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.35);
     }
 
     .toast-avatar svg {
       width: 20px;
       height: 20px;
-      fill: #ffffff;
+      fill: #0f172a;
     }
 
     .toast-content {
@@ -365,7 +376,7 @@
 
     .toast-meta {
       font-size: 11px;
-      color: #9ca3af;
+      color: #94a3b8;
       margin-top: 2px;
       display: flex;
       align-items: center;
@@ -373,7 +384,7 @@
     }
 
     .toast-meta-tag {
-      color: var(--wp-green);
+      color: var(--blue-light);
       font-weight: 600;
     }
   </style>
@@ -387,7 +398,7 @@
       <span>Grupo VIP • Vagas Limitadas</span>
     </div>
 
-    <!-- Foto do Perfil do WhatsApp -->
+    <!-- Foto do Perfil do WhatsApp com aro em degradê Azul -->
     <div class="avatar-box">
       <div class="avatar-ring">
         <img class="avatar-img" src="assets/luciane-lima.jpg" alt="Luciane Lima">
@@ -402,7 +413,7 @@
     <!-- Cabeçalho -->
     <div class="title-group">Black Friday Exclusiva</div>
     <h1 class="title-main">
-      👑 Grupo VIP <br><span class="gold">Condições Especiais</span>
+      👑 Grupo VIP <br><span class="blue-gradient">Condições Especiais</span>
     </h1>
     <div class="subtitle-author">Luciane Lima Estética Avançada</div>
 
