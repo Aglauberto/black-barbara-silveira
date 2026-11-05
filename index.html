@@ -3,58 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Grupo VIP | Black Friday — Luciane Lima Estética Avançada</title>
-  <meta name="description" content="Acesso antecipado e exclusivo às condições de Black Friday para procedimentos estéticos.">
+  <title>Grupo VIP | Black Friday — Dra. Bárbara Queiroz</title>
+  <meta name="description" content="Acesso antecipado e exclusivo às condições especiais de Black Friday com a Dra. Bárbara Queiroz.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #07090e;
-      --card-bg: rgba(13, 18, 28, 0.94);
-      --card-border: rgba(56, 189, 248, 0.16);
+      --bg-black: #060606;
+      --card-bg: rgba(14, 14, 14, 0.88);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-border-subtle: rgba(255, 255, 255, 0.07);
       
-      /* Cores da Luciane: Azul Claro e Azul Escuro */
-      --blue-light: #38bdf8;
-      --blue-dark: #1e40af;
-      --blue-gradient: linear-gradient(135deg, #ffffff 0%, #38bdf8 55%, #1d4ed8 100%);
+      --color-white: #ffffff;
+      --color-offwhite: #f5f5f7;
+      --color-muted: #a1a1aa;
+      --color-dim: #71717a;
+      --color-black: #000000;
       
-      --wp-green: #25D366;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --accent-glow: rgba(56, 189, 248, 0.22);
+      --accent-glow: rgba(255, 255, 255, 0.05);
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
       -webkit-tap-highlight-color: transparent;
     }
 
     body {
-      background-color: var(--bg-dark);
-      color: var(--text-main);
+      background-color: var(--bg-black);
+      color: var(--color-offwhite);
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 20px 16px 80px;
+      padding: 24px 16px 80px;
       position: relative;
       overflow-x: hidden;
+      font-weight: 300;
     }
 
-    /* Iluminação de fundo estética em azul */
+    /* Iluminação minimalista de fundo monocromática */
     body::before {
       content: "";
       position: fixed;
-      top: -70px;
+      top: -120px;
       left: 50%;
       transform: translateX(-50%);
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(7, 9, 14, 0) 70%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, rgba(6, 6, 6, 0) 70%);
       pointer-events: none;
       z-index: 0;
     }
@@ -64,64 +64,63 @@
       max-width: 410px;
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 28px;
-      padding: 30px 20px 26px;
+      border-radius: 24px;
+      padding: 34px 22px 28px;
       text-align: center;
       position: relative;
       z-index: 1;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95),
-                  0 0 25px -5px rgba(56, 189, 248, 0.12),
-                  0 0 0 1px rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95),
+                  0 0 30px rgba(255, 255, 255, 0.02);
     }
 
-    /* Tag de Alerta Black Friday */
+    /* Tag / Badge Minimalista */
     .pill-badge {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      color: var(--blue-light);
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--color-white);
       padding: 6px 14px;
       border-radius: 999px;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
+      font-size: 10px;
+      font-weight: 400;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 18px;
-      box-shadow: 0 0 14px rgba(56, 189, 248, 0.15);
+      margin-bottom: 22px;
     }
 
     .pill-dot {
-      width: 7px;
-      height: 7px;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
-      background: var(--blue-light);
-      box-shadow: 0 0 8px var(--blue-light);
-      animation: pulse-dot 1.8s infinite ease-in-out;
+      background: var(--color-white);
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+      animation: pulse-dot 2s infinite ease-in-out;
     }
 
     @keyframes pulse-dot {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.85); }
+      50% { opacity: 0.35; transform: scale(0.8); }
     }
 
-    /* Avatar com aro iluminado em degradê (branco -> azul claro -> azul escuro) */
+    /* Foto de Perfil Clean em P&B com aro fino */
     .avatar-box {
       position: relative;
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 16px;
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 18px;
     }
 
     .avatar-ring {
       width: 100%;
       height: 100%;
       border-radius: 50%;
-      padding: 3.5px;
-      background: var(--blue-gradient);
-      box-shadow: 0 0 28px rgba(56, 189, 248, 0.35);
+      padding: 3px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.08) 100%);
+      box-shadow: 0 0 24px rgba(255, 255, 255, 0.06);
     }
 
     .avatar-img {
@@ -130,109 +129,116 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      background: #0f172a;
+      background: #121212;
+      filter: grayscale(100%) contrast(105%);
     }
 
     .avatar-wp-icon {
       position: absolute;
       bottom: 2px;
       right: 2px;
-      width: 32px;
-      height: 32px;
-      background: var(--wp-green);
+      width: 30px;
+      height: 30px;
+      background: #ffffff;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 2.5px solid #0d121c;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      border: 2px solid #000000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     }
 
     .avatar-wp-icon svg {
-      width: 18px;
-      height: 18px;
-      fill: #ffffff;
+      width: 16px;
+      height: 16px;
+      fill: #000000;
     }
 
-    /* Títulos */
+    /* Tipografia Refinada e Delicada */
     .title-group {
-      font-size: 11.5px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--blue-light);
-      margin-bottom: 4px;
+      color: var(--color-muted);
+      margin-bottom: 8px;
     }
 
     .title-main {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 23px;
-      font-weight: 800;
-      line-height: 1.25;
-      color: #ffffff;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 31px;
+      font-weight: 300;
+      line-height: 1.18;
+      color: var(--color-white);
+      letter-spacing: 0.5px;
       margin-bottom: 6px;
     }
 
-    /* Degradê do branco para azul claro e azul escuro */
-    .title-main .blue-gradient {
-      background: var(--blue-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
+    .title-main em {
+      font-style: italic;
+      font-weight: 400;
+      color: #ffffff;
     }
 
     .subtitle-author {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 16px;
-      color: var(--blue-light);
-      margin-bottom: 20px;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin-bottom: 24px;
     }
 
-    /* Botão CTA Principal */
+    /* Botão CTA Principal Clean Preto & Branco */
     .btn-cta {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       width: 100%;
-      background: linear-gradient(180deg, #2ae06f 0%, #1ea952 100%);
-      color: #ffffff;
+      background: #ffffff;
+      color: #000000;
       text-decoration: none;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.3px;
+      font-size: 13.5px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
       padding: 18px 20px;
-      border-radius: 16px;
-      box-shadow: 0 10px 24px -4px rgba(37, 211, 102, 0.45),
-                  inset 0 1px 0 rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      border: 1px solid #ffffff;
+      box-shadow: 0 10px 28px -4px rgba(255, 255, 255, 0.22);
       position: relative;
       cursor: pointer;
-      transition: transform 0.15s ease, filter 0.15s ease;
-      animation: pulse-glow 2.2s infinite;
+      transition: all 0.2s ease;
+      animation: pulse-glow-clean 2.6s infinite ease-in-out;
     }
 
-    @keyframes pulse-glow {
+    @keyframes pulse-glow-clean {
       0% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4), 0 10px 28px -4px rgba(255, 255, 255, 0.18);
       }
       70% {
-        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+        box-shadow: 0 0 0 12px rgba(255, 255, 255, 0), 0 10px 28px -4px rgba(255, 255, 255, 0.18);
       }
       100% {
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0), 0 10px 28px -4px rgba(255, 255, 255, 0.18);
       }
+    }
+
+    .btn-cta:hover {
+      background: #f0f0f0;
+      transform: translateY(-1px);
     }
 
     .btn-cta:active {
       transform: scale(0.98);
-      filter: brightness(0.93);
+      background: #e4e4e7;
     }
 
     .btn-cta svg {
-      width: 22px;
-      height: 22px;
-      fill: #ffffff;
+      width: 19px;
+      height: 19px;
+      fill: #000000;
       flex-shrink: 0;
     }
 
@@ -243,83 +249,91 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      font-size: 12.5px;
-      color: #94a3b8;
-      background: rgba(56, 189, 248, 0.06);
-      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      color: var(--color-muted);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 6px 14px;
       border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.15);
+      border: 1px solid var(--card-border-subtle);
     }
 
     .social-proof-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--blue-light);
+      width: 5px;
+      height: 5px;
+      background: var(--color-white);
       border-radius: 50%;
-      box-shadow: 0 0 6px var(--blue-light);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
     }
 
     .social-proof strong {
-      color: #ffffff;
+      color: var(--color-white);
+      font-weight: 500;
     }
 
     /* Cartão de Benefícios / Segurança */
     .benefits {
-      background: rgba(255, 255, 255, 0.025);
-      border: 1px solid rgba(56, 189, 248, 0.12);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border-subtle);
       border-radius: 16px;
-      padding: 15px 16px;
+      padding: 16px 18px;
       margin-bottom: 20px;
       text-align: left;
       display: flex;
       flex-direction: column;
-      gap: 11px;
+      gap: 12px;
     }
 
     .benefit-row {
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 13px;
-      color: #e2e8f0;
-      line-height: 1.4;
+      gap: 11px;
+      font-size: 12.5px;
+      font-weight: 300;
+      color: #d4d4d8;
+      line-height: 1.45;
     }
 
     .benefit-icon {
-      width: 18px;
-      height: 18px;
-      color: var(--blue-light);
+      width: 16px;
+      height: 16px;
+      color: var(--color-white);
       flex-shrink: 0;
+      opacity: 0.9;
     }
 
     .benefit-row strong {
-      color: #ffffff;
+      color: var(--color-white);
+      font-weight: 500;
     }
 
-    /* Nota segura */
+    /* Nota de Privacidade & Segurança */
     .security-note {
-      font-size: 11.5px;
-      color: #64748b;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+      color: var(--color-dim);
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .security-note svg {
-      width: 13px;
-      height: 13px;
+      width: 12px;
+      height: 12px;
       fill: currentColor;
     }
 
-    /* === NOTIFICAÇÃO FLUTUANTE SUBINDO (FOMO PROVA SOCIAL) === */
+    /* === NOTIFICAÇÃO FLUTUANTE (FOMO PROVA SOCIAL) CLEAN P&B === */
     .toast-container {
       position: fixed;
-      bottom: 18px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       width: calc(100% - 32px);
-      max-width: 380px;
+      max-width: 370px;
       z-index: 999;
       pointer-events: none;
     }
@@ -328,14 +342,15 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(13, 18, 28, 0.96);
-      border: 1px solid rgba(37, 211, 102, 0.35);
-      border-radius: 16px;
-      padding: 12px 14px;
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.75), 0 0 16px rgba(37, 211, 102, 0.2);
-      backdrop-filter: blur(14px);
+      background: rgba(12, 12, 12, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 14px;
+      padding: 11px 14px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.9), 0 0 16px rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       opacity: 0;
-      transform: translateY(35px) scale(0.96);
+      transform: translateY(30px) scale(0.97);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -345,21 +360,21 @@
     }
 
     .toast-avatar {
-      width: 38px;
-      height: 38px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #25D366, #128C7E);
+      background: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      box-shadow: 0 0 12px rgba(37, 211, 102, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .toast-avatar svg {
-      width: 20px;
-      height: 20px;
-      fill: #ffffff;
+      width: 17px;
+      height: 17px;
+      fill: #000000;
     }
 
     .toast-content {
@@ -368,40 +383,45 @@
     }
 
     .toast-title {
-      font-size: 13px;
-      font-weight: 700;
-      color: #ffffff;
+      font-size: 12.5px;
+      font-weight: 400;
+      color: var(--color-white);
       line-height: 1.25;
     }
 
+    .toast-title strong {
+      font-weight: 500;
+    }
+
     .toast-meta {
-      font-size: 11px;
-      color: #94a3b8;
+      font-size: 10.5px;
+      font-weight: 300;
+      color: var(--color-muted);
       margin-top: 2px;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 6px;
     }
 
     .toast-meta-tag {
-      color: var(--wp-green);
-      font-weight: 600;
+      color: var(--color-white);
+      font-weight: 400;
     }
   </style>
 </head>
 <body>
 
   <main class="card">
-    <!-- Badge -->
+    <!-- Badge Minimalista -->
     <div class="pill-badge">
       <span class="pill-dot"></span>
       <span>Grupo VIP • Vagas Limitadas</span>
     </div>
 
-    <!-- Foto do Perfil do WhatsApp com aro em degradê Azul -->
+    <!-- Foto do Perfil com aro sutil P&B -->
     <div class="avatar-box">
       <div class="avatar-ring">
-        <img class="avatar-img" src="assets/luciane-lima.jpg" alt="Luciane Lima">
+        <img class="avatar-img" src="assets/luciane-lima.jpg" alt="Dra. Bárbara Queiroz">
       </div>
       <div class="avatar-wp-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24">
@@ -410,14 +430,14 @@
       </div>
     </div>
 
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho & Tipografia Delicada -->
     <div class="title-group">Black Friday Exclusiva</div>
     <h1 class="title-main">
-      👑 Grupo VIP <br><span class="blue-gradient">Condições Especiais</span>
+      Grupo VIP <br><em>Condições Especiais</em>
     </h1>
-    <div class="subtitle-author">Luciane Lima Estética Avançada</div>
+    <div class="subtitle-author">Dra. Bárbara Queiroz</div>
 
-    <!-- Botão de Ação Imediata (Topo) -->
+    <!-- Botão de Ação Imediata (Preto e Branco Clean) -->
     <a id="whatsapp-btn" href="https://chat.whatsapp.com/KqTUe1b6V32695FqRzC1Vm" class="btn-cta" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24">
         <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zm5.82 14.04c-.24.68-1.41 1.29-1.94 1.38-.5.08-1.12.12-3.62-.91-3.21-1.32-5.26-4.57-5.42-4.78-.16-.22-1.3-1.73-1.3-3.3 0-1.57.82-2.35 1.11-2.67.29-.32.63-.4.84-.4.21 0 .42.01.6.02.19.01.44-.07.69.52.25.6.87 2.12.95 2.27.08.16.14.35.03.56-.11.22-.16.35-.32.54-.16.19-.34.42-.48.56-.16.16-.33.33-.14.65.19.32.84 1.38 1.81 2.24 1.25 1.11 2.3 1.45 2.62 1.61.32.16.51.14.7-.08.19-.22.82-.95 1.04-1.28.22-.32.44-.27.73-.16.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.13.08.76-.16 1.44z"/>
@@ -428,7 +448,7 @@
     <!-- Prova Social Dinâmica -->
     <div class="social-proof">
       <span class="social-proof-dot"></span>
-      <span><strong id="counter-members">43</strong> mulheres já entraram</span>
+      <span><strong id="counter-members">43</strong> pacientes já entraram</span>
     </div>
 
     <!-- Benefícios do Grupo -->
@@ -443,13 +463,13 @@
         <svg class="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
         </svg>
-        <span>Condições únicas que não irão para o feed</span>
+        <span>Condições únicas não divulgadas nas redes sociais</span>
       </div>
       <div class="benefit-row">
         <svg class="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
           <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
         </svg>
-        <span>Grupo fechado (apenas administradores enviam mensagem)</span>
+        <span>Grupo fechado (apenas comunicados oficiais)</span>
       </div>
     </div>
 
@@ -462,7 +482,7 @@
     </div>
   </main>
 
-  <!-- Container de Notificação Subindo (FOMO) -->
+  <!-- Container de Notificação Subindo (FOMO) P&B -->
   <div class="toast-container">
     <div id="toast" class="toast-notification">
       <div class="toast-avatar">
@@ -474,7 +494,7 @@
         <div id="toast-title" class="toast-title">Camila R. acabou de entrar no grupo!</div>
         <div class="toast-meta">
           <span class="toast-meta-tag">● Recente</span>
-          <span>• Acesso VIP garantido</span>
+          <span>• Acesso VIP confirmado</span>
         </div>
       </div>
     </div>
@@ -506,26 +526,21 @@
       const randomName = names[Math.floor(Math.random() * names.length)];
       toastTitle.innerHTML = `<strong>${randomName}</strong> acabou de entrar no grupo!`;
       
-      // Incrementa o contador na tela
       memberCount++;
       if (counterEl) {
         counterEl.textContent = memberCount;
       }
 
-      // Mostra a notificação subindo
       toast.classList.add('show');
 
-      // Oculta após 3.5 segundos
       setTimeout(() => {
         toast.classList.remove('show');
       }, 3500);
     }
 
-    // Primeira notificação após 2 segundos de carregamento
     setTimeout(() => {
       showEntryNotification();
       
-      // Notificações subsequentes em intervalos aleatórios entre 5s e 8s
       function scheduleNext() {
         const nextInterval = Math.floor(Math.random() * (8000 - 5000 + 1)) + 5000;
         setTimeout(() => {
