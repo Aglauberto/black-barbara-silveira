@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Grupo VIP | Black Friday — Luciane Lima Estética Avançada</title>
+  <meta name="description" content="Acesso antecipado e exclusivo às condições de Black Friday para procedimentos estéticos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #09090b;
+      --card-bg: rgba(18, 18, 22, 0.88);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --gold-primary: #e6ca85;
+      --gold-gradient: linear-gradient(135deg, #fce5b2 0%, #d4af37 50%, #aa820a 100%);
+      --wp-green: #25D366;
+      --wp-hover: #20ba59;
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --accent-glow: rgba(212, 175, 55, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 16px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Iluminação de fundo estética / luxo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, rgba(9, 9, 11, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 410px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      padding: 34px 22px 28px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85),
+                  0 0 0 1px rgba(255, 255, 255, 0.04);
+    }
+
+    /* Tag de Alerta Black Friday */
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-primary);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px #22c55e;
+      animation: pulse-dot 1.8s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+
+    /* Avatar com aro iluminado */
+    .avatar-box {
+      position: relative;
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 18px;
+    }
+
+    .avatar-ring {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #d4af37, #f3e09d, #25D366);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.22);
+    }
+
+    .avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #18181b;
+    }
+
+    .avatar-wp-icon {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      width: 32px;
+      height: 32px;
+      background: var(--wp-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2.5px solid #141418;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .avatar-wp-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: #ffffff;
+    }
+
+    /* Títulos */
+    .title-group {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .title-main {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      line-height: 1.25;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .title-main .gold {
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .subtitle-author {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--gold-primary);
+      margin-bottom: 16px;
+    }
+
+    .description {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: #cbd5e1;
+      margin-bottom: 22px;
+    }
+
+    .description strong {
+      color: #ffffff;
+    }
+
+    /* Cartão de Benefícios / Segurança */
+    .benefits {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 24px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .benefit-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #e2e8f0;
+    }
+
+    .benefit-icon {
+      width: 18px;
+      height: 18px;
+      color: var(--wp-green);
+      flex-shrink: 0;
+    }
+
+    /* Botão CTA Principal */
+    .btn-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: linear-gradient(180deg, #2ae06f 0%, #1ea952 100%);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 24px -4px rgba(37, 211, 102, 0.45),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.28);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.15s ease, filter 0.15s ease;
+      animation: pulse-glow 2.2s infinite;
+    }
+
+    @keyframes pulse-glow {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+      }
+      70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 10px 24px -4px rgba(37, 211, 102, 0.45);
+      }
+    }
+
+    .btn-cta:active {
+      transform: scale(0.98);
+      filter: brightness(0.93);
+    }
+
+    .btn-cta svg {
+      width: 22px;
+      height: 22px;
+      fill: #ffffff;
+      flex-shrink: 0;
+    }
+
+    /* Membros ativos / Prova social */
+    .social-proof {
+      margin-top: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .social-proof-dot {
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+
+    /* Nota segura */
+    .security-note {
+      margin-top: 14px;
+      font-size: 11.5px;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .security-note svg {
+      width: 13px;
+      height: 13px;
+      fill: currentColor;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    <!-- Badge -->
+    <div class="pill-badge">
+      <span class="pill-dot"></span>
+      <span>Grupo VIP • Vagas Limitadas</span>
+    </div>
+
+    <!-- Foto do Perfil do WhatsApp -->
+    <div class="avatar-box">
+      <div class="avatar-ring">
+        <img class="avatar-img" src="assets/luciane-lima.jpg" alt="Luciane Lima">
+      </div>
+      <div class="avatar-wp-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92z"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <div class="title-group">Black Friday Exclusiva</div>
+    <h1 class="title-main">
+      👑 Grupo VIP <br><span class="gold">Condições Especiais</span>
+    </h1>
+    <div class="subtitle-author">Luciane Lima Estética Avançada</div>
+
+    <!-- Descrição -->
+    <p class="description">
+      Espaço exclusivo para mulheres que valorizam o autocuidado e desejam investir em sua beleza com <strong>segurança, qualidade e naturalidade</strong>.
+    </p>
+
+    <!-- Benefícios do Grupo -->
+    <div class="benefits">
+      <div class="benefit-row">
+        <svg class="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span>Acesso <strong>antecipado e exclusivo</strong> aos procedimentos</span>
+      </div>
+      <div class="benefit-row">
+        <svg class="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span>Condições únicas que não irão para o feed</span>
+      </div>
+      <div class="benefit-row">
+        <svg class="benefit-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+        <span>Grupo fechado (sem conversas paralelas)</span>
+      </div>
+    </div>
+
+    <!-- Botão de Ação -->
+    <a id="whatsapp-btn" href="https://chat.whatsapp.com/SEU_LINK_AQUI" class="btn-cta" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zm5.82 14.04c-.24.68-1.41 1.29-1.94 1.38-.5.08-1.12.12-3.62-.91-3.21-1.32-5.26-4.57-5.42-4.78-.16-.22-1.3-1.73-1.3-3.3 0-1.57.82-2.35 1.11-2.67.29-.32.63-.4.84-.4.21 0 .42.01.6.02.19.01.44-.07.69.52.25.6.87 2.12.95 2.27.08.16.14.35.03.56-.11.22-.16.35-.32.54-.16.19-.34.42-.48.56-.16.16-.33.33-.14.65.19.32.84 1.38 1.81 2.24 1.25 1.11 2.3 1.45 2.62 1.61.32.16.51.14.7-.08.19-.22.82-.95 1.04-1.28.22-.32.44-.27.73-.16.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.13.08.76-.16 1.44z"/>
+      </svg>
+      ENTRAR NO GRUPO VIP AGORA
+    </a>
+
+    <!-- Prova Social -->
+    <div class="social-proof">
+      <span class="social-proof-dot"></span>
+      <span>+43 pessoas já entraram no grupo</span>
+    </div>
+
+    <!-- Segurança -->
+    <div class="security-note">
+      <svg viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+      </svg>
+      <span>Acesso 100% gratuito e seguro</span>
+    </div>
+  </main>
+
+  <script>
+    // Permite configurar o link via código ou via parâmetro na URL: ?link=https://chat.whatsapp.com/...
+    const DEFAULT_WHATSAPP_LINK = "https://chat.whatsapp.com/SEU_LINK_AQUI";
+    
+    const params = new URLSearchParams(window.location.search);
+    const linkParam = params.get('link') || params.get('url');
+    const finalLink = linkParam ? decodeURIComponent(linkParam) : DEFAULT_WHATSAPP_LINK;
+    
+    const btn = document.getElementById('whatsapp-btn');
+    if (btn) {
+      btn.href = finalLink;
+    }
+  </script>
+</body>
+</html>
